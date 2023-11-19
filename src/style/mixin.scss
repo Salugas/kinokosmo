@@ -1,0 +1,17 @@
+@mixin img($obj-fit, $obj-pos, $br) {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: $obj-fit;
+	object-position: $obj-pos;
+	border-radius: $br;
+}
+
+@mixin flex($direction, $justify, $aling, $row, $column) {
+	display: flex;
+	align-items: $aling;
+	justify-content: $justify;
+	flex-direction: $direction;
+	row-gap: $row;
+	column-gap: $column;
+}

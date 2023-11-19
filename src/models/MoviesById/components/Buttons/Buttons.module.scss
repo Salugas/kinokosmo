@@ -1,0 +1,25 @@
+.wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 2rem;
+	row-gap: 2rem;
+	margin-top: 2rem;
+
+	@media (max-width: 1024px) {
+	}
+
+	@media (max-width: 500) {
+		width: 10rem;
+
+		row-gap: 2rem;
+	}
+}
+
+.icon {
+	margin-left: 1rem;
+}
+
+.buttons {
+	display: flex;
+	column-gap: 2rem;
+}

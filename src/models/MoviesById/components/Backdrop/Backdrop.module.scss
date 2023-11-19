@@ -1,0 +1,7 @@
+@import '../../../../style/mixin.scss';
+
+.backdrop img {
+	@include img(cover, center, _);
+	z-index: -1;
+	right: -0.1rem;
+}

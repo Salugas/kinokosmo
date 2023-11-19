@@ -1,0 +1,11 @@
+.wrapper {
+	background-color: black;
+	padding-top: 5rem;
+	position: relative;
+
+	color: rgb(255, 255, 255);
+
+	@media (max-width: 1024px) {
+		padding: 5rem 2rem 0rem 2rem;
+	}
+}

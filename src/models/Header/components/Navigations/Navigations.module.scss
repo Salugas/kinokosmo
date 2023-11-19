@@ -1,0 +1,94 @@
+.header {
+	background-color: #000000;
+}
+
+.nav {
+	padding: 1.5rem 0rem;
+	display: flex;
+	justify-content: space-between;
+
+	color: rgb(255, 255, 255);
+	width: 100%;
+
+	.nav__logo {
+		align-items: center;
+	}
+	.nav__list {
+		display: flex;
+		align-items: center;
+		column-gap: 4.5rem;
+
+		font-size: 4rem;
+
+		@media (max-width: 1024px) {
+			column-gap: 1.8rem;
+		}
+
+		.nav__item {
+			display: flex;
+			column-gap: 4.5rem;
+			& a {
+				font-size: 2rem;
+			}
+		}
+	}
+	.nav__icons {
+		display: flex;
+		align-items: center;
+		column-gap: 4.5rem;
+
+		transition: color 0.5s ease-in;
+		color: var(--grey);
+
+		@media (max-width: 1024px) {
+			column-gap: 1.8rem;
+		}
+	}
+	.nav__icons_auth > * {
+		transition: color 0.3s ease-in;
+		color: var(--grey);
+
+		&:hover {
+			color: white;
+		}
+	}
+	.nav__menu,
+	.nav__search,
+	.nav__auth,
+	.nav__favotites {
+		display: none;
+		@media (max-width: 1024px) {
+			display: block;
+		}
+	}
+
+	.nav__search {
+		display: flex;
+		align-items: center;
+	}
+	.nav__auth {
+		display: flex;
+		align-items: end;
+	}
+
+	.nav__favotites.active {
+		color: white;
+	}
+
+	a {
+		color: var(--grey);
+		transition: color var(--delay) ease-in;
+	}
+}
+
+.nav__menu,
+.nav__search,
+.nav__auth,
+.nav__favorites {
+	color: var(--grey);
+	transition: color var(--delay) ease-in;
+	&:hover {
+		color: rgb(255, 255, 255);
+		transition: color var(--delay) ease-in;
+	}
+}

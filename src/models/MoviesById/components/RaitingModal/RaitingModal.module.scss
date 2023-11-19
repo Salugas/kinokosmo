@@ -1,0 +1,147 @@
+.wrapper {
+	position: relative;
+	margin: 20rem auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: column;
+
+	width: 130rem;
+	height: 60%;
+
+	background-color: #1a1a1a;
+	border-radius: 5rem;
+
+	@media (max-width: 1024px) {
+		width: 75rem;
+		margin: 12rem auto;
+	}
+	@media (max-width: 767px) {
+		width: 45rem;
+	}
+	@media (max-width: 500px) {
+		width: 30rem;
+	}
+}
+
+.title {
+	font-size: 5rem;
+	font-weight: 700;
+	color: white;
+
+	& span {
+		@media (max-width: 1024px) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	&__change {
+		color: white;
+		font-size: 5rem;
+		font-weight: 700;
+
+		@media (max-width: 1024px) {
+		}
+		@media (max-width: 767px) {
+			font-size: 2rem;
+		}
+	}
+
+	&__rating {
+		font-size: 7rem;
+		color: #1b2af4;
+
+		@media (max-width: 1024px) {
+		}
+		@media (max-width: 767px) {
+			font-size: 5rem;
+		}
+	}
+
+	&::first-letter {
+		text-transform: uppercase;
+	}
+
+	@media (max-width: 1024px) {
+		text-align: center;
+		font-size: 3rem;
+	}
+	@media (max-width: 767px) {
+		text-align: center;
+		font-size: 2rem;
+		padding: 1rem;
+	}
+}
+
+.button {
+	padding: 3rem;
+	border-radius: 10rem;
+
+	font-size: 3rem;
+	font-weight: 500;
+
+	color: black;
+	background-color: white;
+	text-transform: uppercase;
+
+	cursor: pointer;
+
+	@media (max-width: 1024px) {
+		padding: 2.5rem;
+		font-size: 2.5rem;
+	}
+	@media (max-width: 767px) {
+		padding: 2rem;
+		font-size: 2rem;
+	}
+	@media (max-width: 500px) {
+		font-size: 1.5rem;
+	}
+}
+
+.close {
+	position: absolute;
+	right: 3.2rem;
+	top: 2rem;
+	width: 3.2rem;
+	height: 3.2rem;
+	opacity: 0.3;
+
+	align-self: flex-end;
+
+	padding: 2rem;
+	border-radius: 50%;
+	background-color: rgb(51, 51, 51);
+
+	cursor: pointer;
+
+	transition: opacity 0.3s ease-in;
+	&:hover {
+		opacity: 1;
+		transition: opacity 0.3s ease-in;
+	}
+	&:before,
+	&:after {
+		position: absolute;
+		left: 1.9rem;
+		top: 1rem;
+		content: ' ';
+		height: 2rem;
+		width: 0.2rem;
+		background-color: rgb(255, 255, 255);
+	}
+	&:before {
+		transform: rotate(45deg);
+	}
+	&:after {
+		transform: rotate(-45deg);
+	}
+
+	@media (max-width: 1024px) {
+		top: 1.8rem;
+	}
+	@media (max-width: 767px) {
+		top: -6rem;
+	}
+}

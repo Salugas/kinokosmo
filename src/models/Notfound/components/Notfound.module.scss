@@ -1,0 +1,137 @@
+@import '../../../style/global.scss';
+.wrapper {
+	position: relative;
+	margin: 0 auto;
+	height: 60rem;
+	width: 50rem;
+
+	@media (max-width: 500px) {
+		height: 37rem;
+		width: 36rem;
+	}
+
+	&::before {
+		content: '';
+		display: block;
+		z-index: 1;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(
+				90deg,
+				#000 3.31%,
+				rgba(0, 0, 0, 0.99) 7.71%,
+				rgba(0, 0, 0, 0.96) 12.11%,
+				rgba(0, 0, 0, 0.91) 16.51%,
+				rgba(0, 0, 0, 0.85) 20.91%,
+				rgba(0, 0, 0, 0.76) 25.31%,
+				rgba(0, 0, 0, 0.67) 29.71%,
+				rgba(0, 0, 0, 0.55) 34.11%,
+				rgba(0, 0, 0, 0.44) 38.52%,
+				rgba(0, 0, 0, 0.33) 42.92%,
+				rgba(0, 0, 0, 0.23) 47.32%,
+				rgba(0, 0, 0, 0.15) 51.72%,
+				rgba(0, 0, 0, 0.08) 56.12%,
+				rgba(0, 0, 0, 0.03) 60.52%,
+				rgba(0, 0, 0, 0.01) 64.92%,
+				transparent 69.32%
+			),
+			linear-gradient(
+				-90deg,
+				#000 3.31%,
+				rgba(0, 0, 0, 0.99) 7.71%,
+				rgba(0, 0, 0, 0.96) 12.11%,
+				rgba(0, 0, 0, 0.91) 16.51%,
+				rgba(0, 0, 0, 0.85) 20.91%,
+				rgba(0, 0, 0, 0.76) 25.31%,
+				rgba(0, 0, 0, 0.67) 29.71%,
+				rgba(0, 0, 0, 0.55) 34.11%,
+				rgba(0, 0, 0, 0.44) 38.52%,
+				rgba(0, 0, 0, 0.33) 42.92%,
+				rgba(0, 0, 0, 0.23) 47.32%,
+				rgba(0, 0, 0, 0.15) 51.72%,
+				rgba(0, 0, 0, 0.08) 56.12%,
+				rgba(0, 0, 0, 0.03) 60.52%,
+				rgba(0, 0, 0, 0.01) 64.92%,
+				transparent 69.32%
+			),
+			linear-gradient(
+				-360deg,
+				#000 3.31%,
+				rgba(0, 0, 0, 0.99) 7.71%,
+				rgba(0, 0, 0, 0.96) 12.11%,
+				rgba(0, 0, 0, 0.91) 16.51%,
+				rgba(0, 0, 0, 0.85) 20.91%,
+				rgba(0, 0, 0, 0.76) 25.31%,
+				rgba(0, 0, 0, 0.67) 29.71%,
+				rgba(0, 0, 0, 0.55) 34.11%,
+				rgba(0, 0, 0, 0.44) 38.52%,
+				rgba(0, 0, 0, 0.33) 42.92%,
+				rgba(0, 0, 0, 0.23) 47.32%,
+				rgba(0, 0, 0, 0.15) 51.72%,
+				rgba(0, 0, 0, 0.08) 56.12%,
+				rgba(0, 0, 0, 0.03) 60.52%,
+				rgba(0, 0, 0, 0.01) 64.92%,
+				transparent 69.32%
+			),
+			linear-gradient(
+				180deg,
+				#000 3.31%,
+				rgba(0, 0, 0, 0.99) 3.71%,
+				rgba(0, 0, 0, 0.96) 5.11%,
+				rgba(0, 0, 0, 0.91) 10.51%,
+				rgba(0, 0, 0, 0.85) 15.91%,
+				rgba(0, 0, 0, 0.76) 20.31%,
+				rgba(0, 0, 0, 0.67) 29.71%,
+				rgba(0, 0, 0, 0.55) 34.11%,
+				rgba(0, 0, 0, 0.44) 38.52%,
+				rgba(0, 0, 0, 0.33) 42.92%,
+				rgba(0, 0, 0, 0.23) 47.32%,
+				rgba(0, 0, 0, 0.15) 51.72%,
+				rgba(0, 0, 0, 0.08) 56.12%,
+				rgba(0, 0, 0, 0.03) 60.52%,
+				rgba(0, 0, 0, 0.01) 64.92%,
+				transparent 69.32%
+			);
+	}
+}
+.error {
+	position: relative;
+	z-index: 2;
+
+	margin-top: 23rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&__404 {
+		color: #3578cf;
+		text-shadow: #38abd8 0.3rem 0 2rem;
+		font-size: 7rem;
+
+		@media (max-width: 500px) {
+			font-size: 5rem;
+		}
+	}
+	&__text {
+		color: #000000;
+		text-shadow: #8132ff 0.2rem 0 1.5rem;
+		font-size: 5rem;
+		text-transform: uppercase;
+
+		@media (max-width: 500px) {
+			font-size: 3rem;
+		}
+	}
+
+	@media (max-width: 500px) {
+		margin-top: 10rem;
+	}
+}
+
+img {
+	@include img(cover, center, _);
+	border: 1rem solid black;
+}

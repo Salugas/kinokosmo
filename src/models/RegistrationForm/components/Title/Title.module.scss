@@ -1,0 +1,40 @@
+.wrapper {
+	display: flex;
+	row-gap: 1rem;
+	flex-direction: column;
+
+	width: 100%;
+	padding: 1.5rem;
+
+	background-color: #312b45;
+
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 16px;
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+}
+
+.title {
+	color: white;
+	font-weight: 600;
+	font-size: 2.5rem;
+
+	@media (max-width: 767px) {
+		font-size: 2rem;
+	}
+	@media (max-width: 500px) {
+		font-size: 1.5rem;
+	}
+}
+
+.span {
+	color: #a5a1b2;
+	font-size: 2rem;
+
+	@media (max-width: 767px) {
+		font-size: 1.8rem;
+	}
+	@media (max-width: 500px) {
+		font-size: 1.2rem;
+	}
+}

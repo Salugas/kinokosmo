@@ -1,0 +1,26 @@
+.button {
+	width: fit-content;
+	padding: 1rem 3rem;
+	border-radius: 1.5rem;
+	font-size: 3.5rem;
+	color: var(--grey);
+	background-color: var(--black-grey);
+
+	cursor: pointer;
+
+	transition: color 0.3s ease-in;
+
+	&:hover {
+		color: rgb(77, 118, 255);
+
+		transition: color 0.3s ease-in;
+	}
+
+	@media (max-width: 1024px) {
+		border-radius: 1rem;
+		font-size: 3rem;
+	}
+	@media (max-width: 767px) {
+		font-size: 2.5rem;
+	}
+}

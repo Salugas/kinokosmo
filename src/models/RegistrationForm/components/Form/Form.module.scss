@@ -1,0 +1,21 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	row-gap: 2.5rem;
+
+	width: 50rem;
+
+	@media (max-width: 1024px) {
+		width: 50rem;
+	}
+	@media (max-width: 767px) {
+		width: 41rem;
+	}
+	@media (max-width: 500px) {
+		width: 25rem;
+	}
+}
+
+.loader {
+	margin: 0 auto;
+}

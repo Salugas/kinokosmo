@@ -1,0 +1,28 @@
+.movieLength {
+	margin-bottom: 2rem;
+	font-weight: 500;
+	font-size: 3rem;
+	color: white;
+}
+
+.poster {
+	height: 65rem;
+	width: 40rem;
+
+	@media (max-width: 1024px) {
+		height: 35rem;
+	}
+	@media (max-width: 767px) {
+		height: 32rem;
+	}
+	@media (max-width: 500px) {
+		height: 24rem;
+	}
+}
+
+.buttons {
+	display: flex;
+	column-gap: 2rem;
+
+	margin-top: 2rem;
+}

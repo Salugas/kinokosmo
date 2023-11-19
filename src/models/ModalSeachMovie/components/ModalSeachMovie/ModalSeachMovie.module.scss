@@ -1,0 +1,58 @@
+.wrapper {
+	position: relative;
+	z-index: 9999;
+}
+
+.movies {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	width: fit-content;
+	row-gap: 6rem;
+
+	margin-top: 8rem;
+}
+
+.input {
+	display: flex;
+	justify-content: start;
+
+	margin-top: 10rem;
+}
+
+.close {
+	position: relative;
+	top: 5rem;
+	right: 10rem;
+	display: flex;
+	justify-content: end;
+
+	@media (max-width: 1024px) {
+		top: 1rem;
+	}
+	@media (max-width: 767px) {
+		right: 3rem;
+		top: 1rem;
+	}
+	@media (max-width: 500px) {
+		right: 3rem;
+		top: 1rem;
+	}
+}
+
+.loader {
+	display: flex;
+	justify-content: center;
+	margin: 30rem auto;
+}
+
+.pagination {
+	display: flex;
+	align-items: center;
+	column-gap: 5rem;
+
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+}

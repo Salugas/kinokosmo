@@ -1,0 +1,14 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	background-color: rgb(0, 0, 0);
+
+	overflow: hidden;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+
+	row-gap: 4rem;
+}

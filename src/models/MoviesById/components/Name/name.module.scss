@@ -1,0 +1,21 @@
+.name {
+	position: relative;
+	height: 20rem;
+	z-index: 2;
+
+	@media (max-width: 1024px) {
+	}
+	@media (max-width: 767px) {
+		height: 8rem;
+	}
+	@media (max-width: 500px) {
+		height: 8rem;
+	}
+}
+.name img {
+	position: absolute;
+	width: 100% !important;
+	height: 100% !important;
+	object-position: left bottom;
+	object-fit: contain !important;
+}

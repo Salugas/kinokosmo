@@ -1,0 +1,48 @@
+.wrapper {
+	position: fixed;
+	left: 40rem;
+	width: 100%;
+	height: 100%;
+
+	background-color: black;
+
+	transition: left 0.3s ease-in;
+
+	@media (max-width: 1024px) {
+		left: 80rem;
+	}
+	@media (max-width: 767px) {
+		left: 55rem;
+	}
+	@media (max-width: 500px) {
+		left: 45rem;
+	}
+	&.active {
+		left: 0;
+		transition: left 0.3s ease-in;
+	}
+}
+
+.nav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	row-gap: 4rem;
+
+	margin-top: 8rem;
+	font-size: 2rem;
+
+	@media (max-width: 1024px) {
+		row-gap: 6rem;
+		font-size: 4rem;
+	}
+	@media (max-width: 767px) {
+		row-gap: 5rem;
+		font-size: 3rem;
+	}
+	@media (max-width: 500px) {
+		font-size: 3rem;
+		row-gap: 4rem;
+	}
+}

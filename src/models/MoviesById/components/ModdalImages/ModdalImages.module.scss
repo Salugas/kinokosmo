@@ -1,0 +1,42 @@
+@import '../../../../style/mixin.scss';
+
+.images {
+	position: relative;
+	margin: 12rem auto;
+	height: 70rem;
+
+	@media (max-width: 1024px) {
+		margin: 0rem 1rem;
+	}
+	@media (max-width: 767px) {
+		margin: 0 1rem;
+	}
+	@media (max-width: 500px) {
+		margin: 0 1rem;
+	}
+
+	& img {
+		@include img(contain, _, _);
+	}
+}
+
+.close {
+	position: relative;
+	top: 5rem;
+	right: 10rem;
+	display: flex;
+	justify-content: end;
+
+	@media (max-width: 1024px) {
+		top: 1rem;
+		right: 3rem;
+	}
+	@media (max-width: 767px) {
+		right: 2rem;
+		top: 1rem;
+	}
+	@media (max-width: 500px) {
+		right: 3rem;
+		top: 1rem;
+	}
+}

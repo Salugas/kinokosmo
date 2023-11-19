@@ -1,0 +1,32 @@
+.button {
+	display: flex;
+	align-items: center;
+	padding: 2rem;
+	font-weight: 500;
+	font-size: 2.5rem;
+	border-radius: 1rem;
+
+	color: rgb(253, 253, 253);
+
+	transition: filter var(--delay) ease-in;
+	filter: brightness(1);
+
+	@media (max-width: 1024px) {
+	}
+	@media (max-width: 767px) {
+		height: 5rem;
+		font-size: 1.8rem;
+		padding: 1rem 1.2rem;
+	}
+	@media (max-width: 500px) {
+		font-size: 1.4rem;
+		padding: 0.5rem 1.2rem;
+		height: 4rem;
+	}
+
+	cursor: pointer;
+	&:hover {
+		transition: filter var(--delay) ease-in;
+		filter: brightness(1.3);
+	}
+}

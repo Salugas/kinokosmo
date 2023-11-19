@@ -1,0 +1,12 @@
+.header {
+	background-color: black;
+	position: fixed;
+	width: 100%;
+	top: 0rem;
+	transition: top 0.3s ease-in;
+	z-index: 99;
+	&.active {
+		top: -8rem;
+		transition: top 0.3s ease-in;
+	}
+}

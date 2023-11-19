@@ -1,0 +1,11 @@
+.wrapper {
+	display: flex;
+	column-gap: 4.5rem;
+
+	@media (max-width: 1024px) {
+		display: none;
+	}
+	& a {
+		font-size: 2rem;
+	}
+}

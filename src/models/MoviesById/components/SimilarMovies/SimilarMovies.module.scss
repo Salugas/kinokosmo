@@ -1,0 +1,38 @@
+@import '../../../../style/mixin.scss';
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+}
+.movies {
+	position: relative;
+
+	width: 100%;
+}
+
+.title {
+	margin-bottom: 2rem;
+
+	font-size: 4rem;
+	font-weight: 600;
+	color: white;
+
+	@media (max-width: 1024px) {
+		margin-bottom: 2rem;
+		font-size: 2.2rem;
+	}
+}
+
+.poster {
+	height: 65rem;
+
+	@media (max-width: 1024px) {
+		height: 35rem;
+	}
+	@media (max-width: 767px) {
+		height: 32rem;
+	}
+	@media (max-width: 500px) {
+		height: 24rem;
+	}
+}

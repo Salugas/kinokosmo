@@ -1,0 +1,72 @@
+$wi: 3rem;
+$he: 0.2rem;
+$bc: white;
+
+@mixin item-style {
+	width: $wi;
+	height: $he;
+	background-color: $bc;
+	position: relative;
+	top: 0;
+	bottom: 0;
+	transition: all 0.3s ease-in;
+
+	@media (max-width: 767px) {
+		width: 2.4rem;
+	}
+	@media (max-width: 500px) {
+		width: 1.8rem;
+		height: 0.1rem;
+	}
+}
+
+.menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	height: 2.5rem;
+	cursor: pointer;
+
+	@media (max-width: 767px) {
+		height: 2rem;
+	}
+	@media (max-width: 500px) {
+		height: 1.5rem;
+	}
+
+	&__item__top {
+		@include item-style;
+
+		&.active {
+			top: 0.7rem;
+			transform: rotate(45deg);
+			opacity: 0;
+			transition: transform top opacity 0.3s ease-in;
+		}
+	}
+	&__item__middle {
+		@include item-style;
+
+		&.active {
+			transform: rotate(-45deg);
+			transition: opacity 0.3s ease-in;
+		}
+	}
+	&__item__bottom {
+		@include item-style;
+
+		&.active {
+			top: -1.1rem;
+			transform: rotate(45deg);
+
+			transition: all 0.3s ease-in;
+			@media (max-width: 767px) {
+				top: -0.85rem;
+			}
+			@media (max-width: 500px) {
+				top: -0.7rem;
+			}
+		}
+	}
+}

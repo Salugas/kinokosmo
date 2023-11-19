@@ -1,0 +1,31 @@
+.input input {
+	border: none;
+
+	padding: 1rem;
+	width: 100rem;
+
+	letter-spacing: 0.15rem;
+	word-spacing: 0.8rem;
+
+	border-radius: 1rem;
+
+	box-shadow: 0.3rem 0.3rem 1rem 0.3rem rgb(0, 0, 0);
+
+	@media (max-width: 1024px) {
+		width: 60rem;
+	}
+	@media (max-width: 767px) {
+		width: 45rem;
+	}
+	@media (max-width: 500px) {
+		width: 30rem;
+	}
+}
+.input input[type='text'] {
+	font-size: 2.5rem;
+	font-weight: 300;
+
+	@media (max-width: 767px) {
+		font-size: 2rem;
+	}
+}

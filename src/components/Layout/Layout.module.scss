@@ -1,0 +1,10 @@
+.main {
+	margin-top: 6rem;
+
+	@media (max-width: 767px) {
+		margin-top: 3.8rem;
+	}
+	@media (max-width: 767px) {
+		margin-top: 5rem;
+	}
+}

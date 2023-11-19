@@ -1,0 +1,57 @@
+@import '../../../../style/mixin.scss';
+
+.wrapper {
+	display: flex;
+	flex-basis: 50%;
+
+	@media (max-width: 767px) {
+		flex-basis: 100%;
+	}
+
+	& img {
+		opacity: 1;
+		transition: opacity 0.2s ease-in;
+	}
+
+	&:hover img {
+		opacity: 0.6;
+		transition: opacity 0.2s ease-in;
+	}
+}
+
+.movie {
+	display: flex;
+	flex-direction: row;
+	column-gap: 2rem;
+
+	&__poster {
+		position: relative;
+		width: 8rem;
+		height: 12rem;
+
+		& img {
+			@include img(cover, center, 1rem);
+		}
+	}
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	row-gap: 1rem;
+	&__name {
+		font-size: 2rem;
+		font-weight: 600;
+		color: white;
+	}
+}
+
+.description {
+	display: flex;
+	column-gap: 2rem;
+	align-items: end;
+
+	font-size: 2rem;
+	color: white;
+}

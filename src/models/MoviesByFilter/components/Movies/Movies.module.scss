@@ -1,0 +1,16 @@
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-auto-rows: 39rem;
+}
+
+.loader {
+	margin: 10rem auto;
+	width: 40rem;
+	height: 40rem;
+
+	@media (max-width: 500px) {
+		width: 30rem;
+		height: 30rem;
+	}
+}

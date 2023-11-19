@@ -1,0 +1,56 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	column-gap: 10rem;
+	row-gap: 0.8rem;
+	font-size: 2rem;
+
+	@media (max-width: 1024px) {
+	}
+	@media (max-width: 767px) {
+		font-size: 1.6rem;
+	}
+	@media (max-width: 500px) {
+		font-size: 1.2rem;
+	}
+}
+
+.persons {
+	display: flex;
+	column-gap: 2rem;
+	text-wrap: nowrap;
+
+	&__name {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 2rem;
+		row-gap: 0.5rem;
+		width: 100%;
+	}
+
+	& span {
+		font-weight: 500;
+		color: var(--grey);
+	}
+	& a {
+		position: relative;
+		font-weight: 500;
+		color: white;
+		transition: background-color 0.2s ease-in;
+		cursor: pointer;
+
+		&:hover {
+			transition: all 0.2s ease-in;
+			background-color: #ffffff38;
+		}
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			height: 0.1rem;
+			width: 100%;
+			background-color: #ffffff38;
+		}
+	}
+}

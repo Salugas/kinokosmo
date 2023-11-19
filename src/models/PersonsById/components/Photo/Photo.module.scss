@@ -1,0 +1,20 @@
+@import '../../../../style/mixin.scss';
+
+.photo {
+	position: relative;
+	width: 20rem;
+	height: 20rem;
+
+	@media (max-width: 1024px) {
+		width: 18rem;
+		height: 18rem;
+	}
+	@media (max-width: 767px) {
+		width: 15rem;
+		height: 15rem;
+	}
+
+	& img {
+		@include img(cover, center, 50%);
+	}
+}

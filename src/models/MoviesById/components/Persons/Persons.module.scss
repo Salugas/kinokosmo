@@ -1,0 +1,89 @@
+@import '../../../../style/mixin.scss';
+.wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.title {
+	margin-bottom: 6rem;
+
+	font-size: 4rem;
+	font-weight: 600;
+	color: white;
+
+	@media (max-width: 1024px) {
+		margin-bottom: 2rem;
+		font-size: 2.2rem;
+	}
+	@media (max-width: 767px) {
+		margin-bottom: 2rem;
+		font-size: 2.2rem;
+	}
+	@media (max-width: 500px) {
+		margin-bottom: 2rem;
+		font-size: 2.2rem;
+	}
+}
+
+.person__list {
+	display: flex;
+	flex-direction: row;
+}
+
+.person__item {
+	display: flex;
+
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	cursor: pointer;
+
+	img {
+		bottom: -0.5rem;
+		transition: all var(--delay) ease-in;
+	}
+	&:hover img {
+		bottom: 0rem;
+		transition: all var(--delay) ease-in;
+	}
+}
+
+.name {
+	text-align: center;
+	margin-top: 1.5rem;
+	font-size: 2rem;
+	color: white;
+
+	@media (max-width: 1024px) {
+		font-size: 1.2rem;
+	}
+	@media (max-width: 767px) {
+		font-size: 1.2rem;
+	}
+	@media (max-width: 500px) {
+		font-size: 1.2rem;
+	}
+}
+
+.photo {
+	position: relative;
+	width: 16rem;
+	height: 16rem;
+	& img {
+		border-radius: 50%;
+		@include img(cover, center, 50%);
+	}
+
+	@media (max-width: 1024px) {
+		width: 10rem;
+		height: 10rem;
+	}
+	@media (max-width: 767px) {
+		width: 8rem;
+		height: 8rem;
+	}
+	@media (max-width: 500px) {
+		width: 8rem;
+		height: 8rem;
+	}
+}

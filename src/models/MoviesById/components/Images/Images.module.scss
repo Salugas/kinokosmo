@@ -1,0 +1,34 @@
+@import '../../../../style/mixin.scss';
+
+.wrapper {
+	display: flex;
+	column-gap: 3rem;
+
+	@media (max-width: 1024px) {
+		width: 100vw;
+	}
+}
+
+.item {
+	position: relative;
+	width: 76rem;
+	height: 40rem;
+	cursor: pointer;
+
+	@media (max-width: 1024px) {
+		width: 35rem;
+		height: 19rem;
+	}
+	@media (max-width: 767px) {
+		width: 39.5rem;
+		height: 19rem;
+	}
+	@media (max-width: 500px) {
+		width: 34.5rem;
+		height: 19rem;
+	}
+
+	& img {
+		@include img(cover, center, 1rem);
+	}
+}

@@ -1,0 +1,10 @@
+* {
+	--swiper-navigation-size: 4rem;
+	--swiper-navigation-color: rgb(255, 255, 255);
+}
+.swiper-button-next,
+.swiper-button-prev {
+	background-color: rgba(128, 128, 128, 0.712);
+	border-radius: 1.5rem;
+	padding: 5rem 3rem 5rem 3rem;
+}
