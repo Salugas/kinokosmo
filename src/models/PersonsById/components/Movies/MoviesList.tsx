@@ -32,14 +32,7 @@ export const MoviesList: FC<MoviesListProps> = ({ movies }) => {
 				{'Фильмография:'} {'(' + countMovies + ')'}
 			</div>
 
-			<Grid>
-				{data &&
-					data.map(item => (
-						<Link to={`/movie/${item.id}`}>
-							<MoviesItem item={item} />
-						</Link>
-					))}
-			</Grid>
+			<Grid>{data && data.map(item => <MoviesItem item={item} />)}</Grid>
 			<div className={cl.buttons}>
 				{countMovies && limit >= countMovies ? (
 					<PaginationButton onClick={() => resetLimit()}>

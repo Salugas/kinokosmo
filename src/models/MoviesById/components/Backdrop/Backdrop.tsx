@@ -6,9 +6,5 @@ interface BackdropProps {
 }
 
 export const Backdrop: FC<BackdropProps> = ({ backdrop }) => {
-	return (
-		<div className={cl.backdrop}>
-			<img src={backdrop} alt='' />
-		</div>
-	)
+	return <div className={cl.backdrop}>{<img src={backdrop} alt='' />}</div>
 }

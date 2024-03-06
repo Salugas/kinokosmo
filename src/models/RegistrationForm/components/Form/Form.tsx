@@ -20,6 +20,8 @@ export const Form = () => {
 	} = useForm({ mode: 'onBlur' })
 
 	const onSubmit = (data: any) => {
+		console.log(data)
+
 		setAuth([data])
 	}
 
@@ -34,6 +36,7 @@ export const Form = () => {
 						errors={errors?.name}
 						isErrorMassage={errors?.name?.message}
 						description={'имя'}
+						value='Salugas'
 					/>
 					<RegistrationInput
 						register={{
@@ -44,6 +47,7 @@ export const Form = () => {
 						errors={errors?.email}
 						isErrorMassage={errors?.email?.message}
 						description={'через email или телефон'}
+						value='danya.salygin@mail.ru'
 					/>
 					<RegistrationButton isValid={!isValid} />
 				</form>

@@ -84,12 +84,24 @@ const StyledPoster = styled.div`
 		width: 100%;
 		font-weight: 500;
 		font-size: 2rem;
+
+		@media (max-width: 767px) {
+			font-size: 1.2rem;
+			bottom: 1rem;
+		}
 	}
 
 	.poster__rating {
 		font-size: 2rem;
 		right: ${(props: any) => props.right};
 		top: 4rem;
+	}
+
+	.poster__ageRatingAndYear,
+	.poster__rating {
+		@media (max-width: 767px) {
+			display: none;
+		}
 	}
 `
 
@@ -116,7 +128,7 @@ export const Poster: FC<PosterProps> = ({ ...props }) => {
 				{props.rating !== 0 && (
 					<div className='poster__rating'>
 						<Rating padding='1.5rem' backgroundColor={props.ratingColor}>
-							{props.rating && props.rating?.toFixed(1)}
+							{props.rating && props.rating.toFixed(1)}
 						</Rating>
 					</div>
 				)}

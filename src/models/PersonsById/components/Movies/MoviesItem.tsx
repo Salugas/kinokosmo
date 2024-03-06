@@ -27,8 +27,8 @@ export const MoviesItem: FC<MoviesItemProps> = ({ item }) => {
 				year={movies?.year}
 				ageRating={movies?.ageRating}
 				right='2rem'
-				width={'25rem'}
-				height={'40rem'}
+				width='100%'
+				height='auto'
 			/>
 		</>
 	)

@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom'
 import { lazy } from 'react'
 import { Layout } from '../components/Layout/Layout'
 import { FavoritesPage } from 'page/FavoritesPage/FavoritesPage'
+// import RequireAuth from './RequireAuth'
 
 const MainPage = lazy(() => import('../page/MainPage/MainPage'))
 const FilterPage = lazy(() => import('../page/FilterPage/FilterPage'))
@@ -19,10 +20,20 @@ export const Routing = () => {
 		<Routes>
 			<Route path='/' element={<Layout />}>
 				<Route index element={<MainPage />} />
+
 				<Route path='movies/:id' element={<MoviesByIdPage />} />
 				<Route path='persons/:id' element={<PersonsByIdPage />} />
 
-				<Route path='favorites' element={<FavoritesPage />}></Route>
+				<Route path='favorites' element={<FavoritesPage />} />
+
+				{/* <Route
+					path='favorites'
+					element={
+						<RequireAuth>
+							<FavoritesPage />
+						</RequireAuth>
+					}
+				/> */}
 
 				<Route path=':type' element={<FilterPage />} />
 

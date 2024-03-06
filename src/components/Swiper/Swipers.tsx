@@ -1,7 +1,6 @@
 import 'swiper/css'
 import { Swiper } from 'swiper/react'
 import { FC, PropsWithChildren } from 'react'
-import { Navigation, Pagination, Scrollbar } from 'swiper'
 
 import 'swiper/scss'
 import 'swiper/scss/navigation'

@@ -10,6 +10,7 @@ import { FilterSelectItem } from './FilterSelectItem'
 import { useAppSelector } from 'hooks/redux'
 import { IOptions, ISelect } from 'models/MoviesByFilter/types/IFilters'
 import { useLocation } from 'react-router-dom'
+import { currentYear } from 'helpers/currentYear'
 
 interface FilterSelectProps {
 	option: ISelect
@@ -83,9 +84,9 @@ export const FilterSelect: FC<PropsWithChildren<FilterSelectProps>> = ({
 						(filters.genre == '' && option.typeName == 'жанры' && 'жанры')}
 
 					{(option.typeName == 'годы выхода' &&
-						filters.year !== '0-2023' &&
+						filters.year !== `0-${currentYear()}` &&
 						filters.year) ||
-						(filters.year == '0-2023' &&
+						(filters.year == `0-${currentYear()}` &&
 							option.typeName == 'годы выхода' &&
 							'годы выхода')}
 

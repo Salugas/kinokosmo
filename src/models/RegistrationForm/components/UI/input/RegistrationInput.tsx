@@ -9,13 +9,15 @@ interface RegistrationInputProps {
 	isErrorMassage: any
 	errors: any
 	description: string
+	value: string
 }
 
 export const RegistrationInput: FC<RegistrationInputProps> = ({
 	register,
 	isErrorMassage,
 	errors,
-	description
+	description,
+	value
 }) => {
 	return (
 		<>
@@ -35,7 +37,7 @@ export const RegistrationInput: FC<RegistrationInputProps> = ({
 						<div className={cl.description}>{description}</div>
 						<div className={cl.error__input}>{errors && 'Ошибка!'}</div>
 					</div>
-					<input type='text' className={cl.input} {...register} />
+					<input value={value} type='text' className={cl.input} {...register} />
 				</div>
 			</div>
 		</>

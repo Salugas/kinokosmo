@@ -21,8 +21,8 @@ export const MoviesItem: FC<MoviesItemProps> = ({ item }) => {
 				rating={item.rating.kp}
 				ratingColor={ratingColor}
 				right='2rem'
-				width={'25rem'}
-				height={'40rem'}
+				width='100%'
+				height='auto'
 			/>
 		</>
 	)

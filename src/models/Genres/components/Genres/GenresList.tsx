@@ -37,7 +37,7 @@ export const GenresList: FC = () => {
 				>
 					{genres &&
 						genres.map((genre: IGenres) => (
-							<SwiperSlide style={{ width: 'auto' }}>
+							<SwiperSlide key={genre.slug} style={{ width: 'auto' }}>
 								<Link
 									onClick={() => setFilters(genre.name)}
 									to={genre.slug == 'anime' ? `anime` : `movie`}

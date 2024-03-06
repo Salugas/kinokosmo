@@ -10,7 +10,7 @@ export const PersonsByIdAPI = createApi({
 		baseUrl: API_URL
 	}),
 	endpoints: build => ({
-		fetchPersonsById: build.query<IPerson, unknown>({
+		fetchPersonsById: build.query<IPerson, number | undefined | string>({
 			query: id => ({
 				url: `v1/person/${id}`,
 				headers: {
@@ -18,7 +18,7 @@ export const PersonsByIdAPI = createApi({
 				}
 			})
 		}),
-		fetchPersonsImagesMovies: build.query<IMovies, unknown>({
+		fetchPersonsImagesMovies: build.query<IMovies, number>({
 			query: id => ({
 				url: `v1.3/movie/${id}`,
 				headers: {

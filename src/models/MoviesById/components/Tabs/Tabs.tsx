@@ -40,30 +40,32 @@ export const Tabs: FC<TabsProps> = ({ description, images }) => {
 	}
 
 	return (
-		<Container center>
-			<div className={cl.wrapper}>
-				<div className={cl.options}>
-					<StyledOptionsDescription
-						onClick={() => handleVisble(false)}
-						className={cl.options__description}
-					>
-						<>{'Описание'}</>
-					</StyledOptionsDescription>
-					<StyledOptionsImages
-						onClick={() => handleVisble(true)}
-						className={cl.options__image}
-					>
-						<>{'Изображение'}</>
-					</StyledOptionsImages>
-				</div>
+		<div>
+			<Container center>
+				<div className={cl.wrapper}>
+					<div className={cl.options}>
+						<StyledOptionsDescription
+							onClick={() => handleVisble(false)}
+							className={cl.options__description}
+						>
+							<>{'Описание'}</>
+						</StyledOptionsDescription>
+						<StyledOptionsImages
+							onClick={() => handleVisble(true)}
+							className={cl.options__image}
+						>
+							<>{'Изображение'}</>
+						</StyledOptionsImages>
+					</div>
 
-				<div className={cl.info}>
-					{visbleDescription && (
-						<div className={cl['description-info']}>{description}</div>
-					)}
-					{visbleImages && <ImagesList images={images} />}
+					<div className={cl.info}>
+						{visbleDescription && (
+							<div className={cl['description-info']}>{description}</div>
+						)}
+						{visbleImages && <ImagesList images={images} />}
+					</div>
 				</div>
-			</div>
-		</Container>
+			</Container>
+		</div>
 	)
 }
