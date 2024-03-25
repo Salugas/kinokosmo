@@ -1,6 +1,6 @@
 import cl from './FilterSelect.module.scss'
 
-import { FC, memo } from 'react'
+import { FC } from 'react'
 import { AiOutlineCheck } from 'react-icons/ai'
 import { IOptions } from 'models/MoviesByFilter/types/IFilters'
 
