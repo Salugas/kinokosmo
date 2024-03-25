@@ -1,5 +1,3 @@
-import cl from './Movies.module.scss'
-
 import { FC } from 'react'
 import { breakpoints } from '../../utils/breakpoints'
 import { IMovies } from 'types/IMovies'
