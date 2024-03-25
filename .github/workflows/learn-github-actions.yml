@@ -12,9 +12,9 @@ jobs:
       matrix:
         node-varsion: [18.x]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Starting Node.js ${{ matrix.node-varsion }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{  matrix.node-varsion }}
       - name: install modules
