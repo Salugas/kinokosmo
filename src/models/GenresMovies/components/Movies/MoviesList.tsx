@@ -20,6 +20,9 @@ export const MoviesList: FC<MoviesListProps> = ({ genre }) => {
 	const { data } = GenresMoviesAPI.useFetchGenresMoviesQuery(genre.name)
 	const { docs: movies }: any = { ...data }
 
+	console.log(movies)
+	console.log(genre.name)
+
 	const { setFilterGenre, setResetFilters } = useActions()
 
 	return (

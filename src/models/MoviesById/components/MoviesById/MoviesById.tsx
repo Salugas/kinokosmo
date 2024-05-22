@@ -38,7 +38,7 @@ export const MoviesById = () => {
 				year={movie?.year}
 				movieLength={movie?.movieLength}
 				countries={movie?.countries}
-				name={movie?.logo.url}
+				name={movie?.logo?.url}
 				rating={movie?.rating.kp}
 				genres={movie?.genres}
 				description={movie?.description}
@@ -50,9 +50,11 @@ export const MoviesById = () => {
 			/>
 			<div className={cl.main}>
 				<Tabs description={movie?.description} images={images} />
-				<SimilarMoviesList similarMovies={movie?.similarMovies} />
+				{movie?.similarMovies && (
+					<SimilarMoviesList similarMovies={movie?.similarMovies} />
+				)}
 				<PersonsList persons={movie?.persons} />
-				<FactsList facts={movie?.facts} />
+				{movie?.facts && <FactsList facts={movie?.facts} />}
 			</div>
 		</div>
 	)

@@ -10,7 +10,7 @@ export const GenresMoviesAPI = createApi({
 	endpoints: build => ({
 		fetchGenresMovies: build.query<IMovies, unknown>({
 			query: genre => ({
-				url: `v1.3/movie?SortField=genres.name&genres.name=${genre}&limit=12`,
+				url: `v1.3/movie?&genres.name=${genre}&limit=12`,
 				headers: {
 					'X-API-KEY': API_KEY
 				}
